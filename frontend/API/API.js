@@ -45,7 +45,7 @@ const deleteCreyente = async (id) => {
             );
             setTimeout(() => {
                 window.location = "creyentes.html";
-            }, 3000); // 3000 milisegundos (3 segundos)
+            }, 1500); // 3000 milisegundos (3 segundos)
         } else {
             Swal.fire({
                 icon: 'error',
