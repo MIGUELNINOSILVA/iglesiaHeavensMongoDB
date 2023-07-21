@@ -1,4 +1,8 @@
-import { getAllCreyentes } from "../API/API.js";
+import {
+    getAllCreyentes,
+    getOneCreyente,
+    deleteCreyente
+} from "../API/API.js";
 
 document.addEventListener('DOMContentLoaded', showData);
 
@@ -35,14 +39,21 @@ async function showData() {
                     title: '¿Estás seguro de eliminar el dato?',
                     showDenyButton: true,
                     showCancelButton: true,
-                    confirmButtonText: 'Save',
-                    denyButtonText: `Don't save`,
-                }).then((result) => {
+                    confirmButtonText: 'Eliminar',
+                    denyButtonText: `No eliminar`,
+                }).then(async (result) => {
                     if (result.isConfirmed) {
-                        console.log("Confirmado");
-                        // Aquí puedes agregar la lógica para eliminar el dato
+                        await deleteCreyente(boton.id);
+                        setTimeout(() => {
+                            window.location = "creyentes.html";
+                        }, 3000); // 3000 milisegundos (3 segundos)
+
                     } else if (result.isDenied) {
-                        console.log("Denegado");
+                        Swal.fire({
+                            icon: 'Cancel',
+                            title: 'Cancel',
+                            text: 'Has cancelado la eliminación del creyente!'
+                        })
                     }
                 });
             });
