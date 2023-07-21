@@ -113,6 +113,7 @@ main {
     background: var(--color-azulBonito);
     color: white;
     font-weight: 600;
+    transition: .4s;
 }
 
 .card button:hover {
