@@ -11,7 +11,7 @@
     --color-rosadoSuave: #E6BCCD;
 }
 
-body{
+body {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -50,14 +50,77 @@ nav a:hover {
     box-shadow: 0px 0px 20px -18px;
 }
 
-nav a:active{
+nav a:active {
     transform: scale(0.95);
 }
 
-main div {
-    background-color: var(--color-rosadoSuave);
+main {
+    margin: 1rem;
 }
 
-main{
-    margin: 1rem;
+/* Cards */
+.card {
+    width: 190px;
+    height: 254px;
+    background: #3405a3;
+    border-radius: 15px;
+    box-shadow: 1px 5px 60px 0px #100a886b;
+    padding: 1rem;
+}
+
+.card .card-border-top {
+    width: 60%;
+    height: 3%;
+    background: #6b64f3;
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.card span {
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.card .job {
+    font-weight: 400;
+    color: #000;
+    display: block;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 12px;
+}
+
+.card .img {
+    width: 70px;
+    height: 80px;
+    background: var(--color-azulBonito);
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.card button {
+    padding: 8px 25px;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    border: none;
+    margin-top: 30px;
+    background: var(--color-azulBonito);
+    color: white;
+    font-weight: 600;
+}
+
+.card button:hover {
+    background: var(--color-moradoEspiritual);
+}
+
+#contentCreyentes{
+    background-color: var(--color-azulBonito);
+    padding: 1.5rem;
+    border-radius: 15px;
 }
