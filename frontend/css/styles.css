@@ -60,8 +60,8 @@ main {
 
 /* Cards */
 .card {
-    width: 190px;
-    height: 254px;
+    width: 290px;
+    height: 454px;
     background: #3405a3;
     border-radius: 15px;
     box-shadow: 1px 5px 60px 0px #100a886b;
@@ -71,7 +71,7 @@ main {
 .card .card-border-top {
     width: 60%;
     height: 3%;
-    background: #6b64f3;
+    background: var(--color-azulBonito);
     margin: auto;
     border-radius: 0px 0px 15px 15px;
 }
