@@ -24,7 +24,7 @@ const getOneCreyente = async (req, res) => {
 
 const addOneCreyente = async (req, res) => {
     const creyente = new Creyente(req.body);
-    const {nombre} = creyente;
+    const { nombre } = creyente;
     try {
         /* Verificar si el nombre ya existe */
         const nombreExiste = await Creyente.findOne({ nombre });
@@ -41,8 +41,32 @@ const addOneCreyente = async (req, res) => {
     }
 }
 
+const deleteCreyente = async (req, res) => {
+    try {
+        await Creyente.deleteOne({ _id: req.params.id });
+        res.status(200).send({
+            response: "Eliminado correctamente"
+        });
+    } catch (error) {
+        res.status(500).send(error);
+    }
+}
+
+const updateCreyente = async (req, res) => {
+    try {
+        let updateCreyente = await Creyente.findOneAndUpdate({
+            _id:req.params.id
+        },req.body,{new:true});
+        res.json(updateCreyente);
+    } catch (error) {
+        res.status
+    }
+}
+
 export {
     getCreyente,
     getOneCreyente,
-    addOneCreyente
+    addOneCreyente,
+    deleteCreyente,
+    updateCreyente
 }

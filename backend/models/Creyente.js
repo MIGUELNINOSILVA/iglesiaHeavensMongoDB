@@ -26,6 +26,8 @@ const creyenteSchema = mongoose.Schema({
         required: true,
       }
     
+}, {
+    timestamps: true
 });
 
 const Creyente = mongoose.model('creyente', creyenteSchema);
